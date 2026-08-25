@@ -1,0 +1,26 @@
+# Never bake secrets or local state into an image
+.env
+.env.local
+*.pem
+*.key
+
+.git/
+.github/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.deepeval/
+*.egg-info/
+build/
+dist/
+.idea/
+.vscode/
+.DS_Store
+*.log

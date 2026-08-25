@@ -1,0 +1,49 @@
+# Secrets — never commit a real .env
+.env
+.env.local
+*.pem
+*.key
+!.env.example
+!.env.demo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing, coverage, type cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.deepeval/
+.deepeval_telemetry.txt
+
+# The FAISS index IS committed on purpose: it makes `git clone && run` work with
+# no embedding model download. It is ~50 KB. Only ignore indexes built elsewhere.
+data/*
+!data/faiss_index/
+!data/faiss_index/index.faiss
+!data/faiss_index/index.pkl
+
+# IDE / OS
+.vscode/settings.json
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+logs/

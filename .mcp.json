@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "crisis-squad": {
+      "command": "python",
+      "args": ["-m", "src.mcp_server"],
+      "env": {
+        "DEMO_MODE": "true",
+        "GCB_API_URL": "http://localhost:8000",
+        "GCB_API_TOKEN": ""
+      },
+      "description": "GCB Autonomous Crisis Squad - trigger incidents, inspect DORA metrics, approve HitL gates, generate specs. Set GCB_API_TOKEN to the API's API_SECRET_KEY when API_AUTH_ENABLED=true."
+    }
+  }
+}
